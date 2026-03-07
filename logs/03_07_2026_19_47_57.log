@@ -1,0 +1,10 @@
+{"session_id": "session_20260307_194758_f694f4e7", "temp_dir": "data\\session_20260307_194758_f694f4e7", "faiss_dir": "faiss_index\\session_20260307_194758_f694f4e7", "sessionized": true, "timestamp": "2026-03-07T14:17:58.144624Z", "level": "info", "event": "ChatIngestor initialized"}
+{"session_id": "session_20260307_194758_dabee401", "temp_dir": "data\\session_20260307_194758_dabee401", "faiss_dir": "faiss_index\\session_20260307_194758_dabee401", "sessionized": true, "timestamp": "2026-03-07T14:17:58.153757Z", "level": "info", "event": "ChatIngestor initialized"}
+{"chunks": 3, "chunk_size": 500, "overlap": 100, "timestamp": "2026-03-07T14:17:58.153757Z", "level": "info", "event": "Documents split"}
+Loading faiss with AVX2 support.
+Successfully loaded faiss with AVX2 support.
+`embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+{"session_id": "s1", "timestamp": "2026-03-07T14:17:58.412450Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "s1", "timestamp": "2026-03-07T14:17:58.413445Z", "level": "info", "event": "ConversationalRAG initialized"}
+{"error": "Error in [<unknown>] at line [-1] | Message: RAG chain not initialized. Call load_retriever_from_faiss() before invoke().", "timestamp": "2026-03-07T14:17:58.413445Z", "level": "error", "event": "Failed to invoke ConversationalRAG"}
+{"error": "FAISS index directory not found: faiss_index/does_not_exist", "timestamp": "2026-03-07T14:17:58.414351Z", "level": "error", "event": "Failed to load retriever from FAISS"}
