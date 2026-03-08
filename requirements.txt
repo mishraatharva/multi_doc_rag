@@ -22,5 +22,6 @@ langsmith
 # openai
 pandas
 reportlab
+pypdf
 
 # ARN:arn:aws:iam::386093907119:user/multi_doc_chat
