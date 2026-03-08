@@ -27,8 +27,12 @@
       ],
       "secrets": [
         {
-          "name": "apikeyliveclass",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:386093907119:secret:multi_doc_chat_secret_key-8OFQoV"
+          "name": "GROQ_API_KEY",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:386093907119:secret:multi_doc_chat_secret_key:GROQ_API_KEY::"
+        },
+        {
+          "name": "FIREWORKS_API_KEY",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:386093907119:secret:multi_doc_chat_secret_key:FIREWORKS_API_KEY::"
         }
       ],
       "logConfiguration": {
