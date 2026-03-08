@@ -2,45 +2,44 @@
   "family": "llmopstdlive",
   "networkMode": "awsvpc",
   "executionRoleArn": "arn:aws:iam::386093907119:role/ecsTaskExecutionRole",
-],
-"cpu": "1024",
-"memory": "8192",
-"containerDefinitions": [
-  {
-    "name": "multi-doc-chat-container",
-    "image": "386093907119.dkr.ecr.us-east-1.amazonaws.com/multi-doc-chat",
-    "cpu": 1024,
-    "essential": true,
-    "portMappings": [
-      {
-        "containerPort": 8080,
-        "hostPort": 8080,
-        "protocol": "tcp",
-        "name": "multi-doc-chat-container-8080-tcp",
-        "appProtocol": "http"
-      }
-    ],
-    "environment": [
-      {
-        "name": "ENV",
-        "value": "production"
-      }
-    ],
-    "secrets": [
-      {
-        "name": "apikeyliveclass",
-        "valueFrom": "arn:aws:secretsmanager:us-east-1:386093907119:secret:multi_doc_chat_secret_key-8OFQoV"
-      }
-    ],
-    "logConfiguration": {
-      "logDriver": "awslogs",
-      "options": {
-        "awslogs-group": "/ecs/llmopstdlive",
-        "awslogs-region": "us-east-1",
-        "awslogs-stream-prefix": "ecs",
-        "awslogs-create-group": "true"
+  "cpu": "1024",
+  "memory": "8192",
+  "containerDefinitions": [
+    {
+      "name": "multi-doc-chat-container",
+      "image": "386093907119.dkr.ecr.us-east-1.amazonaws.com/multi-doc-chat",
+      "cpu": 1024,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp",
+          "name": "multi-doc-chat-container-8080-tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "environment": [
+        {
+          "name": "ENV",
+          "value": "production"
+        }
+      ],
+      "secrets": [
+        {
+          "name": "apikeyliveclass",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:386093907119:secret:multi_doc_chat_secret_key-8OFQoV"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/llmopstdlive",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs",
+          "awslogs-create-group": "true"
+        }
       }
     }
-  }
-]
+  ]
 }
